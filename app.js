@@ -14,11 +14,13 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-console.log(getComputerChoice());
 
 function game(userChoice) {
-  console.log("You chose: " + userChoice + "  🥱 🥱 🥱");
+  const computerChoice = getComputerChoice();
+  console.log("user choice ==> " + userChoice);
+  console.log("computer choice ==> " + computerChoice);
 }
+
 
 
 function main() {
