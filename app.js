@@ -35,7 +35,7 @@ function win(userChoice, computerChoice) {
   beats ${convertToText(computerChoice)}${smallCompWord} . You win! 🥳`;
 
   userChoice_div.classList.add('green-glow');
-  setTimeout(function() {userChoice_div.classList.remove('green-glow')}, 300);
+  setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 
 
 }
@@ -53,7 +53,7 @@ function lose(userChoice, computerChoice) {
   loses to ${convertToText(computerChoice)}${smallCompWord} . You lose 🥺 `;
 
   userChoice_div.classList.add('red-glow');
-  setTimeout(function() {userChoice_div.classList.remove('red-glow')}, 300);
+  setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 
 function draw(userChoice, computerChoice) {
@@ -68,7 +68,7 @@ function draw(userChoice, computerChoice) {
   equals to ${convertToText(computerChoice)}${smallCompWord} . It's a draw 🤠 `;
 
   userChoice_div.classList.add('grey-glow');
-  setTimeout(function() {userChoice_div.classList.remove('grey-glow')}, 300);
+  setTimeout(() => userChoice_div.classList.remove('grey-glow'), 300);
 }
 
 
@@ -96,15 +96,9 @@ function game(userChoice) {
 
 
 function main() {
-  rock_div.addEventListener('click', function() {
-    game("r");
-  })
-  paper_div.addEventListener('click', function() {
-    game("p");
-  })
-  scissors_div.addEventListener('click', function() {
-    game("s");
-  })
+  rock_div.addEventListener('click', () => game("r"));
+  paper_div.addEventListener('click', () => game("p"));
+  scissors_div.addEventListener('click', () => game("s"));
 }
 
 main();
