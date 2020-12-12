@@ -31,6 +31,8 @@ function win(userChoice, computerChoice) {
   result_div.innerHTML = `${convertToText(userChoice)}${smallUserWord}
   beats ${convertToText(computerChoice)}${smallCompWord} . You win! 🥳`;
 
+  document.getElementById(userChoice).classList.add('green-glow');
+
 }
 
 function lose(userChoice, computerChoice) {
