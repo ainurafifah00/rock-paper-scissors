@@ -41,22 +41,34 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
+  const smallUserWord = "user".fontsize(3).sub();
+  const smallCompWord = "comp".fontsize(3).sub();
+  const userChoice_div = document.getElementById(userChoice);
+
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "user".fontsize(3).sub();
-  const smallCompWord = "comp".fontsize(3).sub();
+
   result_div.innerHTML = `${convertToText(userChoice)}${smallUserWord}
   loses to ${convertToText(computerChoice)}${smallCompWord} . You lose 🥺 `;
+
+  userChoice_div.classList.add('red-glow');
+  setTimeout(function() {userChoice_div.classList.remove('red-glow')}, 300);
 }
 
 function draw(userChoice, computerChoice) {
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
   const smallUserWord = "user".fontsize(3).sub();
   const smallCompWord = "comp".fontsize(3).sub();
+  const userChoice_div = document.getElementById(userChoice);
+
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+
   result_div.innerHTML = `${convertToText(userChoice)}${smallUserWord}
   equals to ${convertToText(computerChoice)}${smallCompWord} . It's a draw 🤠 `;
+
+  userChoice_div.classList.add('grey-glow');
+  setTimeout(function() {userChoice_div.classList.remove('grey-glow')}, 300);
 }
 
 
