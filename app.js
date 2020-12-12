@@ -16,8 +16,8 @@ function getComputerChoice() {
 
 
 function convertToText(string) {
-  if(string === 'r') {return "Rock";}
-  if(string === 'p') {return "Paper";}
+  if(string === 'r') return "Rock";
+  if(string === 'p') return "Paper";
 
   else return "Scissors";
 }
