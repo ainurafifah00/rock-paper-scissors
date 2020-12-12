@@ -23,15 +23,20 @@ function convertToText(string) {
 }
 
 function win(userChoice, computerChoice) {
+  const smallUserWord = "user".fontsize(3).sub();
+  const smallCompWord = "comp".fontsize(3).sub();
+  const userChoice_div = document.getElementById(userChoice);
+
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  const smallUserWord = "user".fontsize(3).sub();
-  const smallCompWord = "comp".fontsize(3).sub();
+
   result_div.innerHTML = `${convertToText(userChoice)}${smallUserWord}
   beats ${convertToText(computerChoice)}${smallCompWord} . You win! 🥳`;
 
-  document.getElementById(userChoice).classList.add('green-glow');
+  userChoice_div.classList.add('green-glow');
+  setTimeout(function() {userChoice_div.classList.remove('green-glow')}, 300);
+
 
 }
 
