@@ -48,7 +48,8 @@ function draw(userChoice, computerChoice) {
   computerScore_span.innerHTML = computerScore;
   const smallUserWord = "user".fontsize(3).sub();
   const smallCompWord = "comp".fontsize(3).sub();
-  result_div.innerHTML = `Both chose ${convertToText(computerChoice)} . It's a draw 🤠 `;
+  result_div.innerHTML = `${convertToText(userChoice)}${smallUserWord}
+  equals to ${convertToText(computerChoice)}${smallCompWord} . It's a draw 🤠 `;
 }
 
 
